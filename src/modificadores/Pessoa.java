@@ -3,22 +3,18 @@ package modificadores;
 public class Pessoa {
     private String nome;
     private int idade;
-    private String profissao;
-    private Automovel automovel;
+    //Construtor padrão é criado mesmo que não explicado
+    public Pessoa(){
 
-    public void comprarCarro(String cor, String nome, int velocidade) {
-        automovel = new Automovel();
-        automovel.setCor(cor);
-        automovel.setNome(nome);
-        automovel.setVelocidade(velocidade);
+    }
+    //metodo construtor com argumento
+    public Pessoa(String nome){
+        this.nome=nome;
     }
 
-    public Automovel getAutomovel() {
-        return automovel;
-    }
-
-    public void setAutomovel(Automovel automovel) {
-        this.automovel = automovel;
+    public Pessoa(String nome, int idade){
+        this.nome= nome;
+        this.idade= idade;
     }
 
     public String getNome() {
@@ -35,13 +31,5 @@ public class Pessoa {
 
     public void setIdade(int idade) {
         this.idade = idade;
-    }
-
-    public String getProfissao() {
-        return profissao;
-    }
-
-    public void setProfissao(String profissao) {
-        this.profissao = profissao;
     }
 }
